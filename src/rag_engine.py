@@ -17,7 +17,10 @@ MAX_HISTORY = 4  # Número de turnos (pares user/assistant) que recuerda el chat
 # modesta. Los indices FAISS estaticos se regeneran re-embebiendo chunks.pkl.
 EMBEDDINGS_MODEL = "intfloat/multilingual-e5-base"
 RERANKER_MODEL = "cross-encoder/mmarco-mMiniLMv2-L12-H384-v1"
-LLM_MODEL = "llama-3.1-8b-instant"
+# 2026-09-01: Groq retiró la familia Llama de su catálogo. `llama-3.1-8b-instant`
+# devolvía 404 model_not_found, así que /query respondía 500 en TODAS las
+# consultas del widget. Verificado contra GET /openai/v1/models antes del cambio.
+LLM_MODEL = "openai/gpt-oss-20b"
 # El widget del chatbot está en todas las páginas, así que el servicio no puede
 # apagarse como las demos; en su lugar suelta los modelos cuando nadie pregunta.
 IDLE_RELEASE_SECONDS = 30 * 60
