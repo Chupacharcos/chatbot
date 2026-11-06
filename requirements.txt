@@ -1,6 +1,6 @@
 # Core
 python-dotenv==1.2.1
-numpy==2.4.2
+numpy==2.5.4
 scipy==1.17.0
 
 # PDF Processing
@@ -10,12 +10,12 @@ pymupdf==1.27.1
 sentence-transformers==5.2.3
 transformers==4.57.6
 torch==2.10.0
-faiss-cpu==1.13.2
+faiss-cpu==1.15.1
 scikit-learn==1.8.0
 
 # LLM
 groq==0.37.1
-instructor==1.14.5
+instructor==1.17.0
 openai==2.21.0
 
 # API
@@ -25,8 +25,8 @@ python-multipart==0.0.6
 
 # Utils
 pydantic==2.9.0
-packaging==24.0
+packaging==26.3
 tqdm==4.67.3
 
 # PDF Generation (para generar manuales desde scripts)
-fpdf2==2.8.3
+fpdf2==2.9.0
